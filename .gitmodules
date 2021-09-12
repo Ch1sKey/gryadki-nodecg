@@ -1,0 +1,3 @@
+[submodule "bundles/nodecg-hpbars"]
+	path = bundles/nodecg-hpbars
+	url = git@github.com:Ch1sKey/nodecg-hpbars.git

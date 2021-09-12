@@ -1,6 +1,6 @@
 {
-	"short_name": "NodeCG",
-	"name": "NodeCG Dashboard",
+	"short_name": "Грядки",
+	"name": "Панель управления грядок",
 	"icons": [
 		{
 			"src": "/dashboard/img/launcher-icon-1x.png",

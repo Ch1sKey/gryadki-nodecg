@@ -1,0 +1,63 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #242C3D;
+  color: white;
+  font-family: 'Roboto', 'Noto', sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: var(--paper-font-title_-_font-weight);
+}
+
+label {
+  display: block;
+}
+
+button {
+  margin-top: 2px;
+}
+
+.twitch-auth-button {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  text-decoration: none;
+  align-items: center;
+  width: 180px;
+  height: 40px;
+  padding: 8px 15px;
+  background-color: #BE0078;
+  border-radius: 12px;
+}
+
+.twitch-auth-button:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: #000;
+  left: 0;
+  transform: translate(-100%, 0) rotate(45deg);
+  transition: 0.8s;
+}
+
+.twitch-auth-button:hover:before, .twitch-auth-button:focus:before  {
+  transform: translate(100%, 0) rotate(45deg);
+}
+
+.twitch-auth-button__image {
+  position: absolute;
+}
+
+.twitch-auth-button__text {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  border-bottom: none;
+  color: #fff;
+  font-size: 24px;
+}

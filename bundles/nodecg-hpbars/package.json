@@ -1,0 +1,42 @@
+{
+  "name": "nodecg-hpbars",
+  "version": "0.0.0",
+  "description": "A simple bundle for nodech which allow you to add HP-bars.",
+  "homepage": "/test",
+  "author": {
+    "name": "Kirill",
+    "email": "kirill77785@gmail.com",
+    "url": "Not yet"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "test",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "HP Bars",
+        "title": "HP Bars",
+        "width": 4,
+        "file": "panel.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 600,
+        "height": 60
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "MIT"
+}

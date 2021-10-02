@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Управление HP барами.</p>
+    <div id="options-container" class="options-container">
+      <p v-if="!listOfBars || listOfBars.legnth === 0"><i>Добавьте источник.</i></p>
+      <form v-for="(bar, index) in listOfBars" :key="bar.id" id="options">
+        <fieldset>
+          <legend>
+            Имя:
+            <input
+              @change="event => changeName(event.target.value, index)"
+              :value="bar.name"
+              type="text"
+            />
+          </legend>
+          <div>
+            <div class="hp-box">
+              <div class="hp-box-container">
+                <hp-bar :current-hp="bar.hp" :max-hp="bar.maxHp"></hp-bar>
+                <form class="hp-controls">
+                  <div class="hp-controls-row">
+                    <div class="hp-box-input">
+                      <input @change="event => changeHp(event, index, 'hp')" placeholder="+10" id="input" type="text" />
+                    </div>
+                    <div class="hp-box-separator">/</div>
+                    <div class="hp-box-input">
+                      <input @change="event => changeHp(event, index, 'maxHp')" placeholder="-10" id="input" type="text" />
+                    </div>
+                  </div>
+									<div class="hp-controls-button">
+										<button @click.prevent="">Обновить</button>
+									</div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <br />
+          <!-- <div>
+            <label>
+              <span>Цвет:</span>
+              <input
+                id="color"
+                type="color"
+                @input="update"
+                v-model="listOfBars[index].color"
+              />
+            </label>
+          </div> -->
+          <div class="ping-button">
+            <button type="button" @click.prevent="ping(index)">Ping</button>
+          </div>
+        </fieldset>
+        <br />
+      </form>
+      <br />
+      <button @click="reload">Reload</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
